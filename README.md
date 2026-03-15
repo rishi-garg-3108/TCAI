@@ -18,6 +18,45 @@ An AI-powered transaction categorization API built with Django REST Framework. I
 - [Switching Providers](#switching-providers)
 
 ---
+## Project Structure
+TCAI/
+├── manage.py              # django entry point
+├── pyproject.toml         # dependencies managed by uv
+├── uv.lock                # locked dependency versions
+├── .env.example           # template for environment variables
+├── .gitignore
+├── README.md
+│
+├── config/                # django project configuration
+│   ├── settings.py        # environment variables, installed apps, logging
+│   ├── urls.py            # root url routing
+│   ├── asgi.py
+│   └── wsgi.py
+│
+└── categorization/        # main app
+    ├── api/               # request/response layer
+    │   ├── __init__.py
+    │   ├── views.py       # api endpoint
+    │   ├── serializers.py # json request validation
+    │   └── urls.py        # app url routing
+    │
+    ├── services/          # core business logic
+    │   ├── __init__.py
+    │   ├── categorization_service.py  # orchestrates the pipeline
+    │   ├── context_builder.py         # structures transaction data
+    │   ├── prompt_builder.py          # builds the llm prompt
+    │   └── response_parser.py         # parses and validates llm output
+    │
+    ├── llm/               # llm provider integrations
+    │   ├── __init__.py
+    │   ├── base_provider.py       # abstract base class
+    │   ├── openai_provider.py     # openai integration
+    │   ├── ollama_provider.py     # ollama integration
+    │   └── provider_factory.py   # picks provider based on .env
+    │
+│── sample_data/       # for testing
+    ├── sample_transactions.json
+    └── expected_outputs.json
 
 ## How It Works
 
@@ -71,7 +110,7 @@ uv --version
 
 **1. Clone the repository:**
 ```bash
-git clone https://github.com/your-username/TCAI.git
+git clone https://github.com/rishi-garg-3108/TCAI.git
 cd TCAI
 ```
 

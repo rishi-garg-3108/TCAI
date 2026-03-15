@@ -1,0 +1,120 @@
+[
+  {
+    "description": "Slack monthly subscription",
+    "vendor": "Slack",
+    "company_context": {
+      "company_id": "company_1",
+      "industry": "SaaS",
+      "chart_of_accounts": [
+        "Software Subscription",
+        "Office Supplies",
+        "Travel",
+        "Marketing"
+      ],
+      "historical_transactions": [
+        {
+          "description": "Notion subscription",
+          "category": "Software Subscription"
+        },
+        {
+          "description": "Google Workspace",
+          "category": "Software Subscription"
+        }
+      ]
+    }
+  },
+
+
+  {
+    "description": "Uber ride to client meeting",
+    "vendor": "Uber",
+    "company_context": {
+      "company_id": "company_1",
+      "industry": "Consulting",
+      "chart_of_accounts": [
+        "Travel",
+        "Meals",
+        "Office Supplies",
+        "Software Subscription"
+      ],
+      "historical_transactions": [
+        {
+          "description": "Taxi fare airport",
+          "category": "Travel"
+        }
+      ]
+    }
+  },
+
+
+  {
+    "description": "Facebook ad campaign",
+    "vendor": "Meta",
+    "company_context": {
+      "company_id": "company_1",
+      "industry": "E-commerce",
+      "chart_of_accounts": [
+        "Software Subscription",
+        "Office Supplies",
+        "Marketing"
+      ],
+      "historical_transactions": [
+        {
+          "description": "Google Ads campaign",
+          "category": "Marketing"
+        }
+      ]
+    }
+  },
+
+  
+  {
+    "description": "Purchase of printer paper",
+    "vendor": "Staples",
+    "company_context": {
+      "company_id": "company_1",
+      "industry": "Retail",
+      "chart_of_accounts": [
+        "Office Supplies",
+        "Travel",
+        "Marketing"
+      ],
+      "historical_transactions": [
+        {
+          "description": "Ink cartridges",
+          "category": "Office Supplies"
+        }
+      ]
+    }
+  },
+ 
+  {
+  "description": "Team lunch at Chipotle",
+  "vendor": "Chipotle",
+  "company_context": {
+    "company_id": "company_3",
+    "industry": "Technology",
+    "chart_of_accounts": [
+      "Travel",
+      "Office Supplies",
+      "Meals & Entertainment",
+      "Marketing"
+    ],
+    "historical_transactions": [
+      {
+        "description": "Pizza for team meeting",
+        "category": "Meals & Entertainment"
+      },
+      {
+        "description": "Client dinner at Nobu",
+        "category": "Meals & Entertainment"
+      }
+    ]
+  }
+}
+
+
+
+
+
+]

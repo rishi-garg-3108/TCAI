@@ -1,0 +1,11 @@
+[
+  {"category":"Meals & Entertainment",
+  "confidence":0.95,
+  "reason":"Based on historical categorization of similar business-related meal transactions."
+},
+
+  {"category":"Software Subscription",
+  "confidence":1,
+  "reason":"The transaction is for a monthly subscription to Slack, which is a software service, similar to the historical examples of Notion and Google Workspace."
+}         
+]
