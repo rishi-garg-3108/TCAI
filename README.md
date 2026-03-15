@@ -33,28 +33,28 @@ TCAI/
 │   ├── asgi.py
 │   └── wsgi.py
 │
-└── categorization/        # main app
-    ├── api/               # request/response layer
-    │   ├── __init__.py
-    │   ├── views.py       # api endpoint
-    │   ├── serializers.py # json request validation
-    │   └── urls.py        # app url routing
-    │
-    ├── services/          # core business logic
-    │   ├── __init__.py
-    │   ├── categorization_service.py  # orchestrates the pipeline
-    │   ├── context_builder.py         # structures transaction data
-    │   ├── prompt_builder.py          # builds the llm prompt
-    │   └── response_parser.py         # parses and validates llm output
-    │
-    ├── llm/               # llm provider integrations
-    │   ├── __init__.py
-    │   ├── base_provider.py       # abstract base class
-    │   ├── openai_provider.py     # openai integration
-    │   ├── ollama_provider.py     # ollama integration
-    │   └── provider_factory.py   # picks provider based on .env
-    │
-│── sample_data/       # for testing
+├── categorization/        # main app
+│   ├── api/               # request/response layer
+│   │   ├── __init__.py
+│   │   ├── views.py       # api endpoint
+│   │   ├── serializers.py # json request validation
+│   │   └── urls.py        # app url routing
+│   │
+│   ├── services/          # core business logic
+│   │   ├── __init__.py
+│   │   ├── categorization_service.py  # orchestrates the pipeline
+│   │   ├── context_builder.py         # structures transaction data
+│   │   ├── prompt_builder.py          # builds the llm prompt
+│   │   └── response_parser.py         # parses and validates llm output
+│   │
+│   └── llm/               # llm provider integrations
+│       ├── __init__.py
+│       ├── base_provider.py       # abstract base class
+│       ├── openai_provider.py     # openai integration
+│       ├── ollama_provider.py     # ollama integration
+│       └── provider_factory.py   # picks provider based on .env
+│
+└── sample_data/           # for testing
     ├── sample_transactions.json
     └── expected_outputs.json
 
