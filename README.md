@@ -7,6 +7,7 @@ An AI-powered transaction categorization API built with Django REST Framework. I
 ## Table of Contents
 
 - [How It Works](#how-it-works)
+- [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [Setting Up uv](#setting-up-uv)
 - [Project Setup](#project-setup)
@@ -18,7 +19,24 @@ An AI-powered transaction categorization API built with Django REST Framework. I
 - [Switching Providers](#switching-providers)
 
 ---
+
+## How It Works
+
+```
+Request → Serializer → Context Builder → Prompt Builder → LLM Provider → Response Parser → Response
+```
+
+1. **Serializer** validates the incoming request
+2. **Context Builder** structures the transaction data
+3. **Prompt Builder** constructs the LLM prompt
+4. **LLM Provider** calls OpenAI or Ollama
+5. **Response Parser** validates and returns structured JSON
+
+---
+
 ## Project Structure
+
+```
 TCAI/
 ├── manage.py              # django entry point
 ├── pyproject.toml         # dependencies managed by uv
@@ -57,18 +75,7 @@ TCAI/
 └── sample_data/           # for testing
     ├── sample_transactions.json
     └── expected_outputs.json
-
-## How It Works
-
 ```
-Request → Serializer → Context Builder → Prompt Builder → LLM Provider → Response Parser → Response
-```
-
-1. **Serializer** validates the incoming request
-2. **Context Builder** structures the transaction data
-3. **Prompt Builder** constructs the LLM prompt
-4. **LLM Provider** calls OpenAI or Ollama
-5. **Response Parser** validates and returns structured JSON
 
 ---
 
@@ -89,9 +96,9 @@ Request → Serializer → Context Builder → Prompt Builder → LLM Provider �
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-**macOS(Homebrew):**
+**macOS (Homebrew):**
 ```bash
- brew install uv
+brew install uv
 ```
 
 **Windows:**
@@ -164,7 +171,7 @@ OPENAI_API_KEY=your-openai-api-key-here
 MODEL_NAME=gpt-4o-mini
 
 OLLAMA_MODEL=phi3:3.8b
-
+OLLAMA_BASE_URL=http://localhost:11434
 ```
 
 **Generating a Django secret key:**
@@ -179,7 +186,7 @@ Copy the output and paste it as the value of `DJANGO_SECRET_KEY` in your `.env` 
 
 After copying, edit `.env` with your real values based on your chosen provider below.
 
-
+> ⚠️ Never commit `.env` to git — it contains your real secrets. Make sure `.env` is in your `.gitignore`.
 
 ---
 
