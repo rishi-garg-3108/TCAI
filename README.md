@@ -50,8 +50,9 @@ Request → Serializer → Context Builder → Prompt Builder → LLM Provider �
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-**macOS(Homebrew)**
-``` brew install uv
+**macOS(Homebrew):**
+```bash
+ brew install uv
 ```
 
 **Windows:**
