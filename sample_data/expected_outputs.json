@@ -1,11 +1,29 @@
 [
+    {"category":"Software Subscription",
+  "confidence":1,
+  "reason":"The transaction is for a monthly subscription to Slack, which is a software service, similar to the historical examples of Notion and Google Workspace."
+} , 
+
+{"category":"Travel",
+"confidence":0.95,
+"reason":"Uber ride to client meeting is a transportation service and falls under travel expenses."
+},
+
+{"category":"Marketing",
+"confidence":0.95,
+"reason":"A Facebook ad campaign is a form of online advertising similar to Google Ads and fits best under marketing expenses."
+}, 
+
+{"category":"Office Supplies",
+"confidence":0.95,
+"reason":"Purchase of printer paper is typically categorized as an office supply expense."
+},
+  
   {"category":"Meals & Entertainment",
   "confidence":0.95,
   "reason":"Based on historical categorization of similar business-related meal transactions."
-},
+}
 
-  {"category":"Software Subscription",
-  "confidence":1,
-  "reason":"The transaction is for a monthly subscription to Slack, which is a software service, similar to the historical examples of Notion and Google Workspace."
-}         
+
+       
 ]
